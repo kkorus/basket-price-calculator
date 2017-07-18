@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BasketPriceCalculator.Domain;
 using FluentAssertions;
 using NUnit.Framework;
@@ -22,7 +19,7 @@ namespace BasketPriceCalculator.Services.Tests
                 new BasketProduct("butter", 2)
             };
 
-            var products = new List<string> { "milk", "milk", "butter", "butter" };
+            var products = new List<string> {"milk", "milk", "butter", "butter"};
             var basketFactory = new BasketFactory();
 
             // Act
@@ -30,6 +27,19 @@ namespace BasketPriceCalculator.Services.Tests
 
             // Assert 
             result.BasketProducts.ShouldBeEquivalentTo(expectedBasketProducts);
+        }
+
+        [Test]
+        public void Throw_Exception_If_Products_List_Is_Null()
+        {
+            // Arrange
+            var basketFactory = new BasketFactory();
+
+            // Act
+            Action act = () => basketFactory.CreateBasket(null);
+
+            // Assert
+            act.ShouldThrow<ArgumentNullException>();
         }
     }
 }

@@ -36,9 +36,10 @@ namespace BasketPriceCalculator.Services.Tests
 
         private PriceCalculator CreatePriceCalculator()
         {
-            var priceCalculator = new PriceCalculator();
+            IBasketFactory basketFactory = new BasketFactory();
+            IDiscountCalculator discountCalculator = new DiscountCalculator();
+            var priceCalculator = new PriceCalculator(basketFactory, discountCalculator);
             return priceCalculator;
         }
     }
-
 }

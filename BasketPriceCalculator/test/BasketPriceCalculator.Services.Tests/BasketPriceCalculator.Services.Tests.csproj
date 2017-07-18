@@ -63,11 +63,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BasketPriceCalculator.Domain\BasketPriceCalculator.Domain.csproj">
+    <ProjectReference Include="..\..\src\BasketPriceCalculator.Domain\BasketPriceCalculator.Domain.csproj">
       <Project>{bf5f0347-6adb-4908-807d-7fe1ea1d0d12}</Project>
       <Name>BasketPriceCalculator.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BasketPriceCalculator.Services\BasketPriceCalculator.Services.csproj">
+    <ProjectReference Include="..\..\src\BasketPriceCalculator.Services\BasketPriceCalculator.Services.csproj">
       <Project>{ec08d1d1-5aa3-4e07-acbc-cd588a126632}</Project>
       <Name>BasketPriceCalculator.Services</Name>
     </ProjectReference>

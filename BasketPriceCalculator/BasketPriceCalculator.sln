@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Domain.Tests", "test\BasketPriceCalculator.Domain.Tests\BasketPriceCalculator.Domain.Tests.csproj", "{47F5E245-16A6-4603-A6A1-F886F90155C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Services.Tests", "src\BasketPriceCalculator.Services.Tests\BasketPriceCalculator.Services.Tests.csproj", "{C1540BA3-DFC4-448E-B870-E69813C9664D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Services.Tests", "test\BasketPriceCalculator.Services.Tests\BasketPriceCalculator.Services.Tests.csproj", "{C1540BA3-DFC4-448E-B870-E69813C9664D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
