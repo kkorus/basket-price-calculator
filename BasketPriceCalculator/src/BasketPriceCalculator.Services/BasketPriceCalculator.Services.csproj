@@ -49,6 +49,7 @@
     <Compile Include="IOfferService.cs" />
     <Compile Include="IPriceService.cs" />
     <Compile Include="Offer.cs" />
+    <Compile Include="OfferService.cs" />
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

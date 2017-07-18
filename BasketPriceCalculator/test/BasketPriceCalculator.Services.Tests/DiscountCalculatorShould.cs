@@ -29,7 +29,7 @@ namespace BasketPriceCalculator.Services.Tests
         public void Calculate_Discount_For_Basket_When_There_Is_One_Offer()
         {
             // Arrange
-            _offerService.Setup(x => x.GetOffers()).Returns(new IOffer[] {CreateButterAndBreadOffer()});
+            _offerService.Setup(x => x.GetOffers()).Returns(new IOffer[] { CreateButterAndBreadOffer() });
 
             var basketProducts = new List<BasketProduct>
             {
@@ -55,7 +55,7 @@ namespace BasketPriceCalculator.Services.Tests
             var offer1 = CreateButterAndBreadOffer();
             var offer2 = CreateMilkOffer();
 
-            _offerService.Setup(x => x.GetOffers()).Returns(new IOffer[] {offer1, offer2});
+            _offerService.Setup(x => x.GetOffers()).Returns(new IOffer[] { offer1, offer2 });
 
             var basketProducts = new List<BasketProduct>
             {
@@ -80,7 +80,7 @@ namespace BasketPriceCalculator.Services.Tests
             return new Offer
             {
                 Name = "Buy 2 Butter and get a Bread at 50% off",
-                OfferProducts = new[] {new BasketProduct("butter", 2), new BasketProduct("bread", 1)},
+                OfferProducts = new[] { new BasketProduct("butter", 2), new BasketProduct("bread", 1) },
                 PriceCut = 0.5m
             };
         }
@@ -90,10 +90,9 @@ namespace BasketPriceCalculator.Services.Tests
             return new Offer
             {
                 Name = "Buy 3 Milk and get the 4th milk for free",
-                OfferProducts = new[] {new BasketProduct("milk", 4)},
+                OfferProducts = new[] { new BasketProduct("milk", 4) },
                 PriceCut = 1.15M
             };
-
         }
     }
 }
