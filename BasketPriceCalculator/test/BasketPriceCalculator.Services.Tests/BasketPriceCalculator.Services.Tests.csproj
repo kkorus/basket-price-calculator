@@ -59,6 +59,7 @@
     <Compile Include="DiscountCalculatorShould.cs" />
     <Compile Include="OfferServiceShould.cs" />
     <Compile Include="PriceCalculatorFeature.cs" />
+    <Compile Include="PriceServiceShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

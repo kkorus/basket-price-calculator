@@ -52,6 +52,7 @@
     <Compile Include="Offer.cs" />
     <Compile Include="OfferService.cs" />
     <Compile Include="PriceCalculator.cs" />
+    <Compile Include="PriceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
