@@ -45,6 +45,7 @@
     <Compile Include="Discount.cs" />
     <Compile Include="DiscountCalculator.cs" />
     <Compile Include="IBasketFactory.cs" />
+    <Compile Include="IDiscountCalculator.cs" />
     <Compile Include="IOffer.cs" />
     <Compile Include="IOfferService.cs" />
     <Compile Include="IPriceService.cs" />
