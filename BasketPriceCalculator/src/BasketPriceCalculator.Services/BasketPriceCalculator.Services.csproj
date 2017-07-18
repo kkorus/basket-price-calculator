@@ -40,9 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasketFactory.cs" />
     <Compile Include="BasketPrice.cs" />
+    <Compile Include="IBasketFactory.cs" />
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasketPriceCalculator.Domain\BasketPriceCalculator.Domain.csproj">
+      <Project>{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12}</Project>
+      <Name>BasketPriceCalculator.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
