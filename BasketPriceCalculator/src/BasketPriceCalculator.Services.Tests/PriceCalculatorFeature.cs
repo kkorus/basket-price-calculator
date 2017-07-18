@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 using NUnit.Framework;
 
 namespace BasketPriceCalculator.Services.Tests
@@ -19,6 +18,20 @@ namespace BasketPriceCalculator.Services.Tests
 
             // Assert
             Assert.That(result.Price, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Calculate_Price_For_Products_List()
+        {
+            // Arrange
+            var products = new List<string> { "milk", "milk", "milk", "milk" };
+            var priceCalculator = CreatePriceCalculator();
+
+            // Act
+            var result = priceCalculator.CalculatePrice(products);
+
+            // Assert
+            Assert.That(result.Price, Is.EqualTo(3.45));
         }
 
         private PriceCalculator CreatePriceCalculator()

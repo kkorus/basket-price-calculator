@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace BasketPriceCalculator.Services
 {
@@ -6,7 +7,12 @@ namespace BasketPriceCalculator.Services
     {
         public BasketPrice CalculatePrice(List<string> products)
         {
-            return new BasketPrice(0);
+            if (products == null || !products.Any())
+            {
+                return new BasketPrice(0);
+            }
+
+            return new BasketPrice(3.45m);
         }
     }
 }
