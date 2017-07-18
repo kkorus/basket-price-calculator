@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="BasketFactoryShould.cs" />
     <Compile Include="DiscountCalculatorShould.cs" />
+    <Compile Include="OfferServiceShould.cs" />
     <Compile Include="PriceCalculatorFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

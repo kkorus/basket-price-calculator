@@ -18,7 +18,18 @@ namespace BasketPriceCalculator.Services
 
         public Discount CalculateDiscount(IBasket basket)
         {
-            throw new System.NotImplementedException();
+            var discount = 0m;
+            var offers = _offerService.GetOffers();
+            foreach (var offer in offers)
+            {
+                while (basket.Contains(offer.OfferProducts))
+                {
+                    discount += offer.PriceCut;
+                    basket = basket.Remove(offer.OfferProducts);
+                }
+            }
+
+            return new Discount(discount);
         }
     }
 }

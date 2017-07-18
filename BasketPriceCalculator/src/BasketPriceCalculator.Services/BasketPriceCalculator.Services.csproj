@@ -47,6 +47,7 @@
     <Compile Include="IBasketFactory.cs" />
     <Compile Include="IOffer.cs" />
     <Compile Include="IOfferService.cs" />
+    <Compile Include="IPriceService.cs" />
     <Compile Include="Offer.cs" />
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

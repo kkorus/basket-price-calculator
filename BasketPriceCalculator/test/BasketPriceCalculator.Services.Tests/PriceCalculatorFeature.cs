@@ -37,7 +37,8 @@ namespace BasketPriceCalculator.Services.Tests
         private PriceCalculator CreatePriceCalculator()
         {
             IBasketFactory basketFactory = new BasketFactory();
-            IOfferService offerService = new OfferService();
+            IPriceService priceService = new PriceService();
+            IOfferService offerService = new OfferService(priceService);
             IDiscountCalculator discountCalculator = new DiscountCalculator(offerService);
             var priceCalculator = new PriceCalculator(basketFactory, discountCalculator);
             return priceCalculator;
