@@ -1,4 +1,5 @@
-﻿using BasketPriceCalculator.Domain;
+﻿using System;
+using BasketPriceCalculator.Domain;
 
 namespace BasketPriceCalculator.Services
 {
@@ -13,6 +14,11 @@ namespace BasketPriceCalculator.Services
 
         public Discount CalculateDiscount(IBasket basket)
         {
+            if (basket == null)
+            {
+                throw new ArgumentNullException(nameof(basket));
+            }
+
             var discount = 0m;
             var offers = _offerService.GetOffers();
             foreach (var offer in offers)

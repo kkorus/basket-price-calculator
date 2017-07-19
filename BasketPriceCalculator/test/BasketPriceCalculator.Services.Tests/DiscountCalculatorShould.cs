@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BasketPriceCalculator.Domain;
 using FluentAssertions;
 using Moq;
@@ -73,6 +74,20 @@ namespace BasketPriceCalculator.Services.Tests
 
             // Assert 
             discount.Value.Should().Be(expectedDiscount.Value);
+        }
+
+        [Test]
+        public void Thow_Exception_If_Basket_Is_Null()
+        {
+            // Arrange
+
+            // Act
+            Action act = () => _discountCalculator.CalculateDiscount(null);
+
+            // Assert
+            act.ShouldThrow<ArgumentNullException>()
+                .And
+                .ParamName.Should().Be("basket");
         }
 
         private static Offer CreateButterAndBreadOffer()
