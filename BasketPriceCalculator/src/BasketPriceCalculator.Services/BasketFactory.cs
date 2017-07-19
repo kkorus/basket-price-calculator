@@ -7,7 +7,7 @@ namespace BasketPriceCalculator.Services
 {
     public class BasketFactory : IBasketFactory
     {
-        public IBasket CreateBasket(List<string> products)
+        public IBasket CreateBasket(IList<string> products)
         {
             if (products == null)
             {

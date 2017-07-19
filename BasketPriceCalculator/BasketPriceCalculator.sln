@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DF8647E2-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6E4997A8-3783-43D8-9DDD-A4389BFAAA43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.App", "src\BasketPriceCalculator.App\BasketPriceCalculator.App.csproj", "{7CB82BC1-23BF-4B6D-9159-950B9A8991BA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Domain", "src\BasketPriceCalculator.Domain\BasketPriceCalculator.Domain.csproj", "{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Services", "src\BasketPriceCalculator.Services\BasketPriceCalculator.Services.csproj", "{EC08D1D1-5AA3-4E07-ACBC-CD588A126632}"
@@ -17,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.Services.Tests", "test\BasketPriceCalculator.Services.Tests\BasketPriceCalculator.Services.Tests.csproj", "{C1540BA3-DFC4-448E-B870-E69813C9664D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketPriceCalculator.App", "src\BasketPriceCalculator.App\BasketPriceCalculator.App.csproj", "{4FC3EC8D-502E-4FDD-B174-4485287D9C1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CB82BC1-23BF-4B6D-9159-950B9A8991BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CB82BC1-23BF-4B6D-9159-950B9A8991BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CB82BC1-23BF-4B6D-9159-950B9A8991BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CB82BC1-23BF-4B6D-9159-950B9A8991BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,15 +39,19 @@ Global
 		{C1540BA3-DFC4-448E-B870-E69813C9664D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1540BA3-DFC4-448E-B870-E69813C9664D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1540BA3-DFC4-448E-B870-E69813C9664D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC3EC8D-502E-4FDD-B174-4485287D9C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC3EC8D-502E-4FDD-B174-4485287D9C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC3EC8D-502E-4FDD-B174-4485287D9C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC3EC8D-502E-4FDD-B174-4485287D9C1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7CB82BC1-23BF-4B6D-9159-950B9A8991BA} = {6E4997A8-3783-43D8-9DDD-A4389BFAAA43}
 		{BF5F0347-6ADB-4908-807D-7FE1EA1D0D12} = {6E4997A8-3783-43D8-9DDD-A4389BFAAA43}
 		{EC08D1D1-5AA3-4E07-ACBC-CD588A126632} = {6E4997A8-3783-43D8-9DDD-A4389BFAAA43}
 		{47F5E245-16A6-4603-A6A1-F886F90155C6} = {DF8647E2-AFCA-4B18-A776-566420C8F522}
 		{C1540BA3-DFC4-448E-B870-E69813C9664D} = {DF8647E2-AFCA-4B18-A776-566420C8F522}
+		{4FC3EC8D-502E-4FDD-B174-4485287D9C1B} = {6E4997A8-3783-43D8-9DDD-A4389BFAAA43}
 	EndGlobalSection
 EndGlobal

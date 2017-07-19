@@ -20,7 +20,7 @@ namespace BasketPriceCalculator.Services
             _priceService = priceService;
         }
 
-        public BasketPrice CalculatePrice(List<string> products)
+        public BasketPrice CalculatePrice(IList<string> products)
         {
             if (products == null || !products.Any())
             {

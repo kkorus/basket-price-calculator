@@ -5,6 +5,6 @@ namespace BasketPriceCalculator.Services
 {
     public interface IBasketFactory
     {
-        IBasket CreateBasket(List<string> products);
+        IBasket CreateBasket(IList<string> products);
     }
 }

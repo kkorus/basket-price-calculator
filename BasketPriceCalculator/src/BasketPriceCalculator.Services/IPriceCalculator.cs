@@ -4,6 +4,6 @@ namespace BasketPriceCalculator.Services
 {
     public interface IPriceCalculator
     {
-        BasketPrice CalculatePrice(List<string> products);
+        BasketPrice CalculatePrice(IList<string> products);
     }
 }
