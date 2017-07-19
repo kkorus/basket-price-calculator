@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace BasketPriceCalculator.Services.Tests
@@ -20,19 +22,26 @@ namespace BasketPriceCalculator.Services.Tests
             Assert.That(result.Price, Is.EqualTo(0));
         }
 
-        [Test]
-        public void Calculate_Price_For_Products_List()
+        [Test, TestCaseSource(nameof(_calculatePriceCases))]
+        public void Calculate_Price_For_Products_List(string[] products, decimal expectedPrice)
         {
             // Arrange
-            var products = new List<string> { "milk", "milk", "milk", "milk" };
             var priceCalculator = CreatePriceCalculator();
 
             // Act
-            var result = priceCalculator.CalculatePrice(products);
+            var result = priceCalculator.CalculatePrice(products.ToList());
 
             // Assert
-            Assert.That(result.Price, Is.EqualTo(3.45));
+            result.Price.Should().Be(expectedPrice);
         }
+
+        static object[] _calculatePriceCases =
+        {
+            new object[] { new[] { "bread", "butter", "milk"}, 2.95M},
+            new object[] { new[] { "butter", "butter", "bread", "bread"}, 3.1M},
+            new object[] { new[] { "milk", "milk", "milk", "milk"}, 3.45M},
+            new object[] { new[] { "butter", "butter", "bread", "milk", "milk", "milk", "milk", "milk", "milk", "milk", "milk" }, 9M}
+        };
 
         private PriceCalculator CreatePriceCalculator()
         {

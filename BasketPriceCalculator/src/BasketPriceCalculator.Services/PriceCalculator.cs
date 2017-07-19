@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using BasketPriceCalculator.Domain;
 
 namespace BasketPriceCalculator.Services
 {
@@ -29,7 +30,20 @@ namespace BasketPriceCalculator.Services
             var basket = _basketFactory.CreateBasket(products);
             var discount = _discountCalculator.CalculateDiscount(basket);
 
-            return new BasketPrice(3.45m);
+            var basketPrice = CalculateBasketPriceWithDiscount(basket, discount);
+            return basketPrice;
+        }
+
+        private BasketPrice CalculateBasketPriceWithDiscount(IBasket basket, Discount discount)
+        {
+            var total = 0M;
+            foreach (var basketBasketProduct in basket.BasketProducts)
+            {
+                total += basketBasketProduct.Quanity *
+                         _priceService.GetPriceFor(basketBasketProduct.ProductName);
+            }
+
+            return new BasketPrice(total - discount.Value);
         }
     }
 }
