@@ -48,10 +48,12 @@
     <Compile Include="IDiscountCalculator.cs" />
     <Compile Include="IOffer.cs" />
     <Compile Include="IOfferService.cs" />
+    <Compile Include="IPriceCalculator.cs" />
     <Compile Include="IPriceService.cs" />
     <Compile Include="Offer.cs" />
     <Compile Include="OfferService.cs" />
     <Compile Include="PriceCalculator.cs" />
+    <Compile Include="PriceCalculatorException.cs" />
     <Compile Include="PriceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

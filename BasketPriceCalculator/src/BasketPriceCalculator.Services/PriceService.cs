@@ -24,6 +24,16 @@ namespace BasketPriceCalculator.Services
 
         public decimal GetPriceFor(string productName)
         {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                throw new ArgumentException(nameof(productName));
+            }
+
+            if (!_productsPrice.ContainsKey(productName))
+            {
+                throw new PriceCalculatorException($"There is no prices for given product: {productName}");
+            }
+
             return _productsPrice[productName];
         }
 

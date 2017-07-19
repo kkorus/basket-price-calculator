@@ -40,7 +40,7 @@ namespace BasketPriceCalculator.Services.Tests
             IPriceService priceService = new PriceService();
             IOfferService offerService = new OfferService(priceService);
             IDiscountCalculator discountCalculator = new DiscountCalculator(offerService);
-            var priceCalculator = new PriceCalculator(basketFactory, discountCalculator);
+            var priceCalculator = new PriceCalculator(basketFactory, discountCalculator, priceService);
             return priceCalculator;
         }
     }
