@@ -31,7 +31,7 @@ namespace BasketPriceCalculator.Services
 
             if (!_productsPrice.ContainsKey(productName))
             {
-                throw new PriceCalculatorException($"There is no prices for given product: {productName}");
+                throw new PriceCalculatorException($"There is no price for given product: {productName}");
             }
 
             return _productsPrice[productName];
